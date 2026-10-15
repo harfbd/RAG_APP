@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081e32">
+  <meta name="description" content="先檢索，再生成。智慧植栽 RAG 研發誌第二版。">
+  <title>RAG 原理｜智慧植栽 RAG 研發誌 Vol.2</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081e32'/%3E%3Cpath d='M16 43c20 3 31-8 32-26-19 1-31 10-32 26Zm0 0c7-8 17-15 29-20' fill='none' stroke='%23d9b66f' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="6">
+  <a class="skip" href="#article">跳至文章內容</a>
+  <div class="reading-progress" aria-hidden="true"><i></i></div>
+  <aside class="rail" aria-label="雜誌頁面導覽">
+    <a class="brand" href="./index.html"><span class="leafmark" aria-hidden="true">⌁</span><strong>植栽研發誌<small>RAG APP · VOL. 02</small></strong></a>
+    <nav><a href="./index.html"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html"><span>05</span>知識庫</a><a href="./rag.html" class="active" aria-current="page"><span>06</span>RAG 原理</a><a href="./architecture.html"><span>07</span>系統架構</a><a href="./mobile.html"><span>08</span>手機操作</a><a href="./evidence.html"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+    <div class="rail-meta"><span>MAI-LIAO SENIOR HIGH</span><span>2026 DIGITAL EDITION</span></div>
+  </aside>
+  <header class="mobile-head"><a href="./index.html">植栽研發誌</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">目錄</button></header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="手機版頁面導覽"><a href="./index.html"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html"><span>05</span>知識庫</a><a href="./rag.html" class="active" aria-current="page"><span>06</span>RAG 原理</a><a href="./architecture.html"><span>07</span>系統架構</a><a href="./mobile.html"><span>08</span>手機操作</a><a href="./evidence.html"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+  <main id="article" class="magazine-page">
+<article class="standard-page paper rag-page">
+  <header class="article-head"><div><span class="page-label">06 / HOW RAG WORKS</span><h1>先檢索，<br>再生成回答</h1></div><p>RAG（Retrieval-Augmented Generation）先從知識庫找出相關段落，再讓語言模型依據這些內容作答，最後把來源一起交給使用者。</p></header>
+  <section class="question-card"><span>示意問題</span><strong>「小黃瓜葉片發黃，應該先檢查什麼？」</strong><p>真正判斷仍需補充生育階段、葉片位置、環境和近期管理。</p></section>
+  <section class="rag-flow" aria-label="RAG 五步驟">
+    <button class="selected" data-flow="0" aria-pressed="true"><b>01</b><span>農友提問</span></button><button data-flow="1" aria-pressed="false"><b>02</b><span>語意檢索</span></button><button data-flow="2" aria-pressed="false"><b>03</b><span>取回段落</span></button><button data-flow="3" aria-pressed="false"><b>04</b><span>模型統整</span></button><button data-flow="4" aria-pressed="false"><b>05</b><span>附來源回答</span></button>
+  </section>
+  <section class="rag-detail" aria-live="polite"><span id="flow-no">01</span><div><p class="kicker" id="flow-label">INPUT</p><h2 id="flow-title">描述作物與實際症狀</h2><p id="flow-copy">問題越具體，檢索越有機會找出符合情境的手冊段落。系統將自然語言提問送入後端，不把模型金鑰放在手機端。</p></div></section>
+  <section class="video-section"><div class="section-title"><p class="kicker">3-MINUTE EXPLAINERS</p><h2>用兩支短片補充 RAG 概念</h2><p>影片為 IBM Technology 的英文通用教學，與本專題採用的服務不完全相同。</p></div><div class="video-grid"><article><div class="video-stage"><button data-video="XctooiH0moI" aria-label="播放 RAG 聊天應用影片"><span>▶</span><small>2:53</small></button></div><h3>讓聊天應用讀懂 PDF</h3><p>理解文件切塊、向量索引與檢索問答的關係。</p></article><article><div class="video-stage"><button data-video="LpKGm1jJXv4" aria-label="播放 RAG 建置三步驟影片"><span>▶</span><small>2:51</small></button></div><h3>建立 RAG 的三個環節</h3><p>對照本專題的資料準備、檢索與生成流程。</p></article></div></section>
+</article>
+
+    <footer class="page-turn">
+      <a href="./knowledge.html"><span>上一頁</span><strong>← 知識庫</strong></a>
+      <div><span>06</span><i></i><span>12</span></div>
+      <a href="./architecture.html"><span>下一頁</span><strong>系統架構 →</strong></a>
+    </footer>
+  </main>
+  <script src="./script.js" defer></script>
+</body>
+</html>

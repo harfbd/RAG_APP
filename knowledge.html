@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081e32">
+  <meta name="description" content="手冊如何成為可檢索資料。智慧植栽 RAG 研發誌第二版。">
+  <title>知識庫｜智慧植栽 RAG 研發誌 Vol.2</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081e32'/%3E%3Cpath d='M16 43c20 3 31-8 32-26-19 1-31 10-32 26Zm0 0c7-8 17-15 29-20' fill='none' stroke='%23d9b66f' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="5">
+  <a class="skip" href="#article">跳至文章內容</a>
+  <div class="reading-progress" aria-hidden="true"><i></i></div>
+  <aside class="rail" aria-label="雜誌頁面導覽">
+    <a class="brand" href="./index.html"><span class="leafmark" aria-hidden="true">⌁</span><strong>植栽研發誌<small>RAG APP · VOL. 02</small></strong></a>
+    <nav><a href="./index.html"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html" class="active" aria-current="page"><span>05</span>知識庫</a><a href="./rag.html"><span>06</span>RAG 原理</a><a href="./architecture.html"><span>07</span>系統架構</a><a href="./mobile.html"><span>08</span>手機操作</a><a href="./evidence.html"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+    <div class="rail-meta"><span>MAI-LIAO SENIOR HIGH</span><span>2026 DIGITAL EDITION</span></div>
+  </aside>
+  <header class="mobile-head"><a href="./index.html">植栽研發誌</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">目錄</button></header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="手機版頁面導覽"><a href="./index.html"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html" class="active" aria-current="page"><span>05</span>知識庫</a><a href="./rag.html"><span>06</span>RAG 原理</a><a href="./architecture.html"><span>07</span>系統架構</a><a href="./mobile.html"><span>08</span>手機操作</a><a href="./evidence.html"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+  <main id="article" class="magazine-page">
+<article class="standard-page deep">
+  <header class="article-head"><div><span class="page-label">05 / KNOWLEDGE BASE</span><h1>手冊如何變成<br>可檢索的知識</h1></div><p>RAG 的品質先取決於資料。團隊以農業機關公開手冊為主，保留文件與頁碼，讓檢索結果可以回到原始內容。</p></header>
+  <section class="knowledge-spread"><div class="manuals"><img src="./assets/melon-manual.webp" alt="洋香瓜栽培手冊"><img src="./assets/tomato-manual.webp" alt="小果番茄栽培手冊"><p>圖示為知識庫採用資料中的兩份中文手冊。</p></div><div class="kb-stat"><strong>277</strong><span>個手冊段落</span><p>段落數用來描述目前索引規模，並非測試題數，也不是回答正確率。</p></div></section>
+  <section class="crop-bars"><h2>知識庫內容分布</h2><div><label>小黃瓜 <b>99</b></label><i style="--v:100%"></i></div><div><label>洋香瓜 <b>71</b></label><i style="--v:71.7%"></i></div><div><label>小番茄 <b>70</b></label><i style="--v:70.7%"></i></div><div><label>一般番茄 <b>25</b></label><i style="--v:25.3%"></i></div><div><label>甜椒 <b>12</b></label><i style="--v:12.1%"></i></div></section>
+  <section class="process-grid"><article><b>01</b><h3>來源篩選</h3><p>確認文件、作物與資料可信度，排除來源不明內容。</p></article><article><b>02</b><h3>清理切塊</h3><p>把長篇手冊整理為適合語意檢索的段落。</p></article><article><b>03</b><h3>向量化</h3><p>以 Gemini embedding 建立每個段落的向量。</p></article><article><b>04</b><h3>附加欄位</h3><p>保留作物、原始文件和頁碼，支援後續引用。</p></article></section>
+</article>
+
+    <footer class="page-turn">
+      <a href="./requirements.html"><span>上一頁</span><strong>← 需求定義</strong></a>
+      <div><span>05</span><i></i><span>12</span></div>
+      <a href="./rag.html"><span>下一頁</span><strong>RAG 原理 →</strong></a>
+    </footer>
+  </main>
+  <script src="./script.js" defer></script>
+</body>
+</html>

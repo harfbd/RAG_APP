@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081e32">
+  <meta name="description" content="原型目前還不能做什麼。智慧植栽 RAG 研發誌第二版。">
+  <title>限制反思｜智慧植栽 RAG 研發誌 Vol.2</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081e32'/%3E%3Cpath d='M16 43c20 3 31-8 32-26-19 1-31 10-32 26Zm0 0c7-8 17-15 29-20' fill='none' stroke='%23d9b66f' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="11">
+  <a class="skip" href="#article">跳至文章內容</a>
+  <div class="reading-progress" aria-hidden="true"><i></i></div>
+  <aside class="rail" aria-label="雜誌頁面導覽">
+    <a class="brand" href="./index.html"><span class="leafmark" aria-hidden="true">⌁</span><strong>植栽研發誌<small>RAG APP · VOL. 02</small></strong></a>
+    <nav><a href="./index.html"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html"><span>05</span>知識庫</a><a href="./rag.html"><span>06</span>RAG 原理</a><a href="./architecture.html"><span>07</span>系統架構</a><a href="./mobile.html"><span>08</span>手機操作</a><a href="./evidence.html"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html" class="active" aria-current="page"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+    <div class="rail-meta"><span>MAI-LIAO SENIOR HIGH</span><span>2026 DIGITAL EDITION</span></div>
+  </aside>
+  <header class="mobile-head"><a href="./index.html">植栽研發誌</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">目錄</button></header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="手機版頁面導覽"><a href="./index.html"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html"><span>05</span>知識庫</a><a href="./rag.html"><span>06</span>RAG 原理</a><a href="./architecture.html"><span>07</span>系統架構</a><a href="./mobile.html"><span>08</span>手機操作</a><a href="./evidence.html"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html" class="active" aria-current="page"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+  <main id="article" class="magazine-page">
+<article class="standard-page caution-page">
+  <header class="article-head"><div><span class="page-label">11 / LIMITATIONS</span><h1>原型目前<br>還不能做什麼</h1></div><p>把限制明確寫出來，是研發可信度的一部分。下列功能已有介面或操作流程，但成熟度不同。</p></header>
+  <section class="maturity-table"><div class="maturity-head"><span>功能</span><span>目前狀態</span><span>需要補上的工作</span></div><div><strong>文字問答</strong><b class="state done">已實作</b><p>建立正式題集與專家評分</p></div><div><strong>來源標示</strong><b class="state done">已實作</b><p>檢查引用完整性與版本更新</p></div><div><strong>查詢紀錄</strong><b class="state done">已實作</b><p>確認舊答案與新情境的適用性</p></div><div><strong>照片病名辨識</strong><b class="state demo">模擬展示</b><p>接入真實視覺模型與影像資料集</p></div><div><strong>環境趨勢圖</strong><b class="state demo">模擬資料</b><p>介接真實 IoT 感測器與校正流程</p></div></section>
+  <section class="diagnosis-warning"><div class="diagnosis-image"><img src="./assets/diagnosis-demo.webp" alt="拍照診斷模擬畫面"><span>DEMO DATA</span></div><div><p class="kicker">VISION STATUS</p><h2>74% 不代表模型準確率</h2><p>目前後端會從示範案例中產生病名和信心度，程式以 <code>visionMock: true</code> 標記。畫面用來展示操作流程，不能當作真實影像判讀成果。</p><p>正式版本需要取得授權且有標註的作物病徵影像，建立訓練或評估流程，並觀察誤判造成的農務風險。</p></div></section>
+  <aside class="safety-box"><strong>使用邊界</strong><p>本系統現階段是資訊查找與學習原型。症狀不明、資料不足或涉及用藥時，應諮詢農業改良場或合格專業人員。</p></aside>
+</article>
+
+    <footer class="page-turn">
+      <a href="./evaluation.html"><span>上一頁</span><strong>← 測試方法</strong></a>
+      <div><span>11</span><i></i><span>12</span></div>
+      <a href="./future.html"><span>下一頁</span><strong>未來藍圖 →</strong></a>
+    </footer>
+  </main>
+  <script src="./script.js" defer></script>
+</body>
+</html>

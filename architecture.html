@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081e32">
+  <meta name="description" content="前端、後端與模型分工。智慧植栽 RAG 研發誌第二版。">
+  <title>系統架構｜智慧植栽 RAG 研發誌 Vol.2</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081e32'/%3E%3Cpath d='M16 43c20 3 31-8 32-26-19 1-31 10-32 26Zm0 0c7-8 17-15 29-20' fill='none' stroke='%23d9b66f' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="7">
+  <a class="skip" href="#article">跳至文章內容</a>
+  <div class="reading-progress" aria-hidden="true"><i></i></div>
+  <aside class="rail" aria-label="雜誌頁面導覽">
+    <a class="brand" href="./index.html"><span class="leafmark" aria-hidden="true">⌁</span><strong>植栽研發誌<small>RAG APP · VOL. 02</small></strong></a>
+    <nav><a href="./index.html"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html"><span>05</span>知識庫</a><a href="./rag.html"><span>06</span>RAG 原理</a><a href="./architecture.html" class="active" aria-current="page"><span>07</span>系統架構</a><a href="./mobile.html"><span>08</span>手機操作</a><a href="./evidence.html"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+    <div class="rail-meta"><span>MAI-LIAO SENIOR HIGH</span><span>2026 DIGITAL EDITION</span></div>
+  </aside>
+  <header class="mobile-head"><a href="./index.html">植栽研發誌</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">目錄</button></header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="手機版頁面導覽"><a href="./index.html"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html"><span>05</span>知識庫</a><a href="./rag.html"><span>06</span>RAG 原理</a><a href="./architecture.html" class="active" aria-current="page"><span>07</span>系統架構</a><a href="./mobile.html"><span>08</span>手機操作</a><a href="./evidence.html"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+  <main id="article" class="magazine-page">
+<article class="standard-page blueprint">
+  <header class="article-head"><div><span class="page-label">07 / ARCHITECTURE</span><h1>前端、後端與模型<br>各自負責什麼？</h1></div><p>系統採手機可用的 PWA 原型，後端 API 負責檢索、生成與紀錄。外部服務各有明確角色，金鑰只放在伺服器端。</p></header>
+  <section class="architecture"><article><span>01 / 使用者端</span><h2>手機 PWA</h2><p>輸入問題、上傳照片、閱讀回答、查詢歷史與天氣。</p></article><i>→</i><article><span>02 / 應用後端</span><h2>Vercel API</h2><p>接收請求、讀取知識庫、整合檢索與生成結果。</p></article><i>→</i><article><span>03 / 語意檢索</span><h2>Gemini</h2><p>把問題轉為向量，與 277 個手冊段落進行相似度比對。</p></article><i>→</i><article><span>04 / 回答生成</span><h2>Groq · Llama</h2><p>根據檢索內容產生繁體中文建議並整理引用。</p></article></section>
+  <section class="service-table"><div class="service-head"><span>服務</span><span>在系統中的角色</span><span>資料性質</span></div><div><b>Gemini embedding</b><span>語意向量與手冊檢索</span><small>核心</small></div><div><b>Groq Llama 3.3</b><span>依據檢索內容整理回答</span><small>核心</small></div><div><b>Tavily</b><span>提供網路搜尋補充</span><small>補充</small></div><div><b>Open-Meteo</b><span>顯示所在地天氣資訊</span><small>情境</small></div><div><b>BigDataCloud</b><span>將定位轉為中文地名</span><small>情境</small></div></section>
+  <section class="security-note"><div class="lock" aria-hidden="true">◎</div><div><p class="kicker">DESIGN RULE</p><h2>金鑰留在後端</h2><p>手機只呼叫專題的後端端點。模型與搜尋服務金鑰透過伺服器環境變數讀取，避免直接寫入前端程式。</p></div></section>
+</article>
+
+    <footer class="page-turn">
+      <a href="./rag.html"><span>上一頁</span><strong>← RAG 原理</strong></a>
+      <div><span>07</span><i></i><span>12</span></div>
+      <a href="./mobile.html"><span>下一頁</span><strong>手機操作 →</strong></a>
+    </footer>
+  </main>
+  <script src="./script.js" defer></script>
+</body>
+</html>

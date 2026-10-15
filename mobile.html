@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081e32">
+  <meta name="description" content="沿著實際畫面使用。智慧植栽 RAG 研發誌第二版。">
+  <title>手機操作｜智慧植栽 RAG 研發誌 Vol.2</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081e32'/%3E%3Cpath d='M16 43c20 3 31-8 32-26-19 1-31 10-32 26Zm0 0c7-8 17-15 29-20' fill='none' stroke='%23d9b66f' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="8">
+  <a class="skip" href="#article">跳至文章內容</a>
+  <div class="reading-progress" aria-hidden="true"><i></i></div>
+  <aside class="rail" aria-label="雜誌頁面導覽">
+    <a class="brand" href="./index.html"><span class="leafmark" aria-hidden="true">⌁</span><strong>植栽研發誌<small>RAG APP · VOL. 02</small></strong></a>
+    <nav><a href="./index.html"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html"><span>05</span>知識庫</a><a href="./rag.html"><span>06</span>RAG 原理</a><a href="./architecture.html"><span>07</span>系統架構</a><a href="./mobile.html" class="active" aria-current="page"><span>08</span>手機操作</a><a href="./evidence.html"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+    <div class="rail-meta"><span>MAI-LIAO SENIOR HIGH</span><span>2026 DIGITAL EDITION</span></div>
+  </aside>
+  <header class="mobile-head"><a href="./index.html">植栽研發誌</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">目錄</button></header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="手機版頁面導覽"><a href="./index.html"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html"><span>05</span>知識庫</a><a href="./rag.html"><span>06</span>RAG 原理</a><a href="./architecture.html"><span>07</span>系統架構</a><a href="./mobile.html" class="active" aria-current="page"><span>08</span>手機操作</a><a href="./evidence.html"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+  <main id="article" class="magazine-page">
+<article class="standard-page paper mobile-page">
+  <header class="article-head"><div><span class="page-label">08 / MOBILE WALKTHROUGH</span><h1>沿著手機畫面<br>走一次使用流程</h1></div><p>點選四個步驟切換實際原型截圖。這些畫面說明操作流程，也呈現團隊如何把來源與紀錄放進行動介面。</p></header>
+  <section class="phone-walkthrough">
+    <div class="screen-tabs"><button class="selected" data-screen="home" aria-pressed="true"><b>01</b><span>首頁入口</span><small>提問、紀錄與天氣</small></button><button data-screen="answer" aria-pressed="false"><b>02</b><span>閱讀問答</span><small>手冊與網路來源</small></button><button data-screen="history" aria-pressed="false"><b>03</b><span>回看紀錄</span><small>文字與照片諮詢</small></button><button data-screen="weather" aria-pressed="false"><b>04</b><span>參考天氣</span><small>連回栽培情境</small></button></div>
+    <div class="phone-stage"><div class="phone"><img id="screen-image" src="./assets/phone-home.webp" alt="智慧植栽系統首頁"></div><div class="phone-copy"><p class="kicker">ACTUAL PROTOTYPE</p><h2 id="screen-title">首頁提供清楚的任務入口</h2><p id="screen-copy">使用者可由首頁進入症狀查詢、檢視紀錄，並查看所在地的天氣資訊。</p></div></div>
+  </section>
+  <section class="ux-principles"><article><span>A</span><h3>大字與清楚層級</h3><p>重要入口、回答內容與來源分層顯示。</p></article><article><span>B</span><h3>以任務命名</h3><p>用「拍照診斷」「問題查詢」描述使用目的。</p></article><article><span>C</span><h3>保留回查路徑</h3><p>讓使用者能回到原始手冊與過去紀錄。</p></article></section>
+</article>
+
+    <footer class="page-turn">
+      <a href="./architecture.html"><span>上一頁</span><strong>← 系統架構</strong></a>
+      <div><span>08</span><i></i><span>12</span></div>
+      <a href="./evidence.html"><span>下一頁</span><strong>資料追溯 →</strong></a>
+    </footer>
+  </main>
+  <script src="./script.js" defer></script>
+</body>
+</html>

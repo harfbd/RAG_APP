@@ -3,162 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b2239">
-  <meta name="description" content="從農友需求、栽培手冊、RAG 檢索到手機原型，完整認識智慧植栽專家系統的研發歷程。">
-  <title>智慧植栽專家系統｜RAG APP 研發歷程</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b2239'/%3E%3Cpath d='M16 43c20 3 31-8 32-26-19 1-31 10-32 26Zm0 0c7-8 17-15 29-20' fill='none' stroke='%23d9b66f' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <meta name="theme-color" content="#081e32">
+  <meta name="description" content="研究總覽。智慧植栽 RAG 研發誌第二版。">
+  <title>封面｜智慧植栽 RAG 研發誌 Vol.2</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081e32'/%3E%3Cpath d='M16 43c20 3 31-8 32-26-19 1-31 10-32 26Zm0 0c7-8 17-15 29-20' fill='none' stroke='%23d9b66f' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">跳至主要內容</a>
-  <div class="site-shell">
-    <aside class="sidebar" aria-label="章節導覽">
-      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" width="24" height="24" fill="none"><path d="M9 29c13 2 21-5 22-19C18 11 10 17 9 29Zm0 0c5-6 11-10 20-15" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>植栽研發誌<small>RAG APP DEVELOPMENT</small></span></a>
-      <div class="side-label">研發歷程 / 01—08</div>
-      <nav class="side-nav" aria-label="八大主題">
-        <a href="#chapter-1"><span>01</span>場域與問題</a>
-        <a href="#chapter-2"><span>02</span>需求與目標</a>
-        <a href="#chapter-3"><span>03</span>知識庫建置</a>
-        <a href="#chapter-4"><span>04</span>RAG 原理</a>
-        <a href="#chapter-5"><span>05</span>系統架構</a>
-        <a href="#chapter-6"><span>06</span>手機操作</a>
-        <a href="#chapter-7"><span>07</span>測試與限制</a>
-        <a href="#chapter-8"><span>08</span>成果與下一步</a>
-      </nav>
-      <span class="nav-scroll-hint" aria-hidden="true">›</span>
-      <div class="side-foot"><span class="side-foot-line"></span>麥寮高中 · 智慧農業專題</div>
-    </aside>
-
-    <main id="main">
-      <section id="top" class="hero section-frame" aria-labelledby="hero-title">
-        <div class="hero-topline"><span>研究與實作全紀錄</span><span>2026 / 虎科大研討會</span></div>
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <div class="kicker"><span class="kicker-line"></span> RETRIEVAL · REASONING · FIELDWORK</div>
-            <h1 id="hero-title">讓栽培建議<br><em>有據可查。</em></h1>
-            <p>從農業現場出發，整理栽培手冊，建立檢索增強生成（RAG）問答，再把它放進農友容易使用的手機介面。這裡記錄智慧植栽專家系統的八個研發環節。</p>
-            <a class="primary-link" href="#chapter-1">開始閱讀 <span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="hero-visual" aria-label="智慧植栽專家系統手機首頁畫面">
-            <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
-            <div class="phone-shell hero-phone"><img src="./assets/phone-home.webp" alt="智慧植栽專家系統首頁實際畫面"></div>
-            <div class="hero-note"><strong>手機端原型</strong><span>文字問答 · 來源回查 · 查詢紀錄</span></div>
-          </div>
-        </div>
-        <div class="hero-footer"><span>01 — 08 / 八大主題</span><span>往下探索 <span aria-hidden="true">↓</span></span></div>
-      </section>
-
-      <section class="chapter-index section-frame" aria-labelledby="index-title">
-        <div class="section-heading"><span class="eyebrow">EXPLORE THE PROCESS</span><h2 id="index-title">八個環節，一條完整的研發路徑</h2><p>依序了解問題怎麼被發現、資料如何成為知識庫，以及原型目前做到哪一步。</p></div>
-        <div class="chapter-grid">
-          <a href="#chapter-1"><span>01</span><strong>場域與問題</strong><small>從農友的疑問開始</small></a>
-          <a href="#chapter-2"><span>02</span><strong>需求與目標</strong><small>把觀察變成設計條件</small></a>
-          <a href="#chapter-3"><span>03</span><strong>知識庫建置</strong><small>整理可靠的手冊資料</small></a>
-          <a href="#chapter-4"><span>04</span><strong>RAG 原理</strong><small>先檢索，再生成回答</small></a>
-          <a href="#chapter-5"><span>05</span><strong>系統架構</strong><small>前端與模型如何合作</small></a>
-          <a href="#chapter-6"><span>06</span><strong>手機操作</strong><small>沿著實際畫面使用</small></a>
-          <a href="#chapter-7"><span>07</span><strong>測試與限制</strong><small>清楚區分實作與模擬</small></a>
-          <a href="#chapter-8"><span>08</span><strong>成果與下一步</strong><small>走向可靠的田間應用</small></a>
-        </div>
-      </section>
-
-      <section id="chapter-1" class="content-section section-frame" aria-labelledby="ch1-title">
-        <div class="chapter-heading"><span class="chapter-no">01 / FIELDWORK</span><h2 id="ch1-title">從農業現場，看見資訊落差</h2><p>農友遇到葉片異常或管理疑問時，需要把作物、症狀、生育階段和環境一起判斷；有用的資訊卻分散在不同手冊與資料來源。</p></div>
-        <div class="photo-story"><img src="./assets/farm-visit.webp" alt="團隊走訪農業場域，了解溫室設備與栽培流程"><div><span class="eyebrow">現地觀察</span><h3>把真實問題帶回設計桌</h3><p>團隊走進農業場域，觀察種植設施與管理工作，並把訪談重點轉化為手機問答、照片上傳和紀錄回查等系統需求。</p><small>照片來源：專題作品說明書</small></div></div>
-      </section>
-      <section id="chapter-2" class="content-section section-frame chapter-two" aria-labelledby="ch2-title">
-        <div class="chapter-heading"><span class="chapter-no">02 / USER NEEDS</span><h2 id="ch2-title">把觀察轉成可操作的需求</h2><p>研究沒有從功能清單開始，而是先釐清農友在田間提問時需要什麼：少打字、看得懂、能追查，還能回頭找曾經問過的事。</p></div>
-        <div class="needs-layout">
-          <figure class="editorial-photo"><img src="./assets/field-conversation.webp" alt="團隊在農業場域與人員交流智慧栽培需求" loading="lazy"><figcaption>場域交流與需求觀察 · 專題紀錄照片</figcaption></figure>
-          <div class="need-list">
-            <div><span>01</span><strong>問題要容易輸入</strong><p>以自然語言描述作物、症狀與情境，手機上就能提問。</p></div>
-            <div><span>02</span><strong>建議要有依據</strong><p>回答附上手冊作物與頁碼，必要時區分網路補充資訊。</p></div>
-            <div><span>03</span><strong>操作要能回顧</strong><p>留下文字查詢與照片紀錄，方便比較不同時間的狀況。</p></div>
-          </div>
-        </div>
-        <div class="research-aim"><span>研究目標</span><p>讓栽培手冊從「需要翻找的文件」，變成手機上可提問、可回查的資訊入口。</p></div>
-      </section>
-
-      <section id="chapter-3" class="content-section section-frame section-deep" aria-labelledby="ch3-title">
-        <div class="chapter-heading"><span class="chapter-no">03 / KNOWLEDGE BASE</span><h2 id="ch3-title">先整理資料，再讓模型回答</h2><p>知識來源以農業機關公開的栽培手冊為主。團隊把文件清理、切分為段落，保留作物、文件與頁碼，建立問答時可檢索的索引。</p></div>
-        <div class="knowledge-layout">
-          <div class="manual-display" aria-label="使用的農業手冊封面">
-            <img src="./assets/melon-manual.webp" alt="洋香瓜栽培手冊封面" loading="lazy">
-            <img src="./assets/tomato-manual.webp" alt="小果番茄栽培手冊封面" loading="lazy">
-            <p>以中文栽培手冊建立主要知識庫；圖為其中兩份資料。</p>
-          </div>
-          <div class="knowledge-data">
-            <div class="big-stat"><strong>277</strong><span>個可檢索的手冊段落</span></div>
-            <div class="bar-list" aria-label="知識庫各作物段落數">
-              <div><span>小黃瓜 <b>99</b></span><i style="--bar:100%"></i></div>
-              <div><span>洋香瓜 <b>71</b></span><i style="--bar:71.7%"></i></div>
-              <div><span>小番茄 <b>70</b></span><i style="--bar:70.7%"></i></div>
-              <div><span>一般番茄 <b>25</b></span><i style="--bar:25.3%"></i></div>
-              <div><span>甜椒 <b>12</b></span><i style="--bar:12.1%"></i></div>
-            </div>
-            <p class="data-note">統計依目前系統知識庫檔案。段落數代表資料規模，不代表回答正確率。</p>
-          </div>
-        </div>
-        <div class="pipeline" aria-label="知識庫建立流程"><div><span>01</span><strong>篩選來源</strong><small>確認文件與作物範圍</small></div><div><span>02</span><strong>清理切塊</strong><small>將手冊整理為段落</small></div><div><span>03</span><strong>建立向量</strong><small>使用 Gemini embedding</small></div><div><span>04</span><strong>保留出處</strong><small>作物、文件與頁碼</small></div></div>
-      </section>
-
-      <section id="chapter-4" class="content-section section-frame chapter-rag" aria-labelledby="ch4-title">
-        <div class="chapter-heading"><span class="chapter-no">04 / HOW RAG WORKS</span><h2 id="ch4-title">RAG：先找資料，再組織回答</h2><p>檢索增強生成把「找相關內容」放在「產生文字」之前。以農友的一個問題為例，依序點選下方五個步驟，看資料如何進入回答。</p></div>
-        <div class="rag-example"><span>示意提問</span><strong>「小黃瓜葉片發黃，應該先檢查什麼？」</strong><small>實際回答仍需提供生育階段、環境與葉片症狀等資訊。</small></div>
-        <div class="rag-steps" role="group" aria-label="RAG 問答五步驟">
-          <button class="is-selected" type="button" data-flow="0" aria-pressed="true"><span>01</span>農友提問</button>
-          <button type="button" data-flow="1" aria-pressed="false"><span>02</span>語意檢索</button>
-          <button type="button" data-flow="2" aria-pressed="false"><span>03</span>取得段落</button>
-          <button type="button" data-flow="3" aria-pressed="false"><span>04</span>模型統整</button>
-          <button type="button" data-flow="4" aria-pressed="false"><span>05</span>附來源回答</button>
-        </div>
-        <div class="flow-detail" aria-live="polite"><div class="flow-symbol" aria-hidden="true">01</div><div><span class="eyebrow" id="flow-kicker">使用者輸入</span><h3 id="flow-title">描述實際遇到的栽培問題</h3><p id="flow-copy">提問可包含作物、葉片顏色、生育階段及近期環境變化。描述越完整，檢索與回答就越有條件可參考。</p></div></div>
-        <div class="video-header"><div><span class="eyebrow">WATCH & LEARN</span><h3>兩支約三分鐘的 RAG 影音補充</h3></div><p>IBM Technology 的英文教學影片介紹通用概念；本站下方附中文導讀。影片並非本專題的實作錄影。</p></div>
-        <div class="video-grid">
-          <article class="video-card"><div class="video-stage"><button type="button" class="video-play" data-video="XctooiH0moI" aria-label="播放約 2 分 53 秒的 RAG 聊天應用影片"><span aria-hidden="true">▶</span><small>2:53 · 英文</small></button></div><div class="video-body"><span>影片 01 · 概念與應用</span><h4>如何讓聊天應用讀懂自己的 PDF？</h4><p>看完可以理解「把文件切成段落，再檢索給模型」的核心想法。本站的農業手冊也經過相似的入庫流程。</p><a href="https://www.youtube.com/watch?v=XctooiH0moI" target="_blank" rel="noopener noreferrer">在 YouTube 開啟 ↗</a></div></article>
-          <article class="video-card"><div class="video-stage"><button type="button" class="video-play" data-video="LpKGm1jJXv4" aria-label="播放約 2 分 51 秒的 RAG 建置三步驟影片"><span aria-hidden="true">▶</span><small>2:51 · 英文</small></button></div><div class="video-body"><span>影片 02 · 建置步驟</span><h4>建立 RAG 系統的三個關鍵環節</h4><p>對照本專題的資料準備、向量檢索及生成回答。影片展示的是通用方法，服務和程式實作與本站專題不同。</p><a href="https://www.youtube.com/watch?v=LpKGm1jJXv4" target="_blank" rel="noopener noreferrer">在 YouTube 開啟 ↗</a></div></article>
-        </div>
-      </section>
-
-      <section id="chapter-5" class="content-section section-frame chapter-architecture" aria-labelledby="ch5-title">
-        <div class="chapter-heading"><span class="chapter-no">05 / SYSTEM DESIGN</span><h2 id="ch5-title">從手機畫面到手冊來源</h2><p>系統採用可在手機瀏覽器使用的 PWA 原型。前端承接提問與顯示結果，後端負責檢索、生成及來源整理；外部模型服務的金鑰保留在後端。</p></div>
-        <div class="architecture-map" aria-label="系統技術架構">
-          <div class="architecture-node"><span>01 / 入口</span><strong>手機端 PWA</strong><small>提問 · 紀錄 · 天氣顯示</small></div>
-          <div class="architecture-node"><span>02 / 後端</span><strong>問答 API</strong><small>整合手冊檢索與網路補充</small></div>
-          <div class="architecture-node"><span>03 / 檢索</span><strong>Gemini embedding</strong><small>問題與手冊段落的語意比對</small></div>
-          <div class="architecture-node"><span>04 / 回答</span><strong>Groq · Llama 3.3</strong><small>依檢索內容整理繁中回答</small></div>
-        </div>
-        <div class="architecture-notes"><div><span class="note-icon" aria-hidden="true">⌕</span><h3>網路資料是補充</h3><p>Tavily 可提供網路搜尋結果，畫面與手冊引用分開顯示，方便使用者判斷來源。</p></div><div><span class="note-icon" aria-hidden="true">◎</span><h3>AI 是開發協作工具</h3><p>學生負責需求、資料查核與測試；AI 協助程式雛形、觀念理解及除錯，教師協助檢視方向。</p></div></div>
-      </section>
-
-      <section id="chapter-6" class="content-section section-frame chapter-phone" aria-labelledby="ch6-title">
-        <div class="chapter-heading"><span class="chapter-no">06 / MOBILE WALKTHROUGH</span><h2 id="ch6-title">沿著手機畫面，走一次使用流程</h2><p>點選四個操作節點，查看專題原型的實際截圖。文字問答、來源列示與紀錄回查已有實作；拍照病名辨識的畫面則屬模擬展示。</p></div>
-        <div class="phone-walkthrough">
-          <div class="phone-selector" role="group" aria-label="手機操作步驟">
-            <button type="button" class="is-selected" data-screen="home" aria-pressed="true"><span>01</span><strong>從首頁進入</strong><small>選擇提問、紀錄或天氣資訊</small></button>
-            <button type="button" data-screen="answer" aria-pressed="false"><span>02</span><strong>閱讀問答</strong><small>以繁中整理手冊與網路資料</small></button>
-            <button type="button" data-screen="history" aria-pressed="false"><span>03</span><strong>回看紀錄</strong><small>查找先前的文字與照片諮詢</small></button>
-            <button type="button" data-screen="weather" aria-pressed="false"><span>04</span><strong>參考天氣</strong><small>結合作物情境檢視現場條件</small></button>
-          </div>
-          <div class="phone-showcase"><div class="phone-shell demo-phone"><img id="demo-screen" src="./assets/phone-home.webp" alt="智慧植栽專家系統手機首頁截圖" loading="lazy"></div><div class="screen-caption"><span>實際原型截圖</span><strong id="screen-caption-title">首頁提供明確的操作入口</strong><p id="screen-caption-copy">農友可以從首頁選擇症狀提問、檢視紀錄，或查看當地天氣資訊。</p></div></div>
-        </div>
-        <div class="prototype-notice"><strong>關於拍照診斷</strong><p>照片上傳與結果頁面可展示操作流程；目前病名辨識及畫面中的信心度是模擬資料，不代表模型準確率。</p></div>
-      </section>
-
-      <section id="chapter-7" class="content-section section-frame section-deep chapter-validation" aria-labelledby="ch7-title">
-        <div class="chapter-heading"><span class="chapter-no">07 / EVALUATION</span><h2 id="ch7-title">把已完成的成果與限制講清楚</h2><p>初步測試包括手冊內容比對、手機操作及農友回饋。現階段資料仍不足以提出正式的問答正確率或使用效益統計。</p></div>
-        <div class="status-grid"><div class="status-panel done"><span>目前已實作</span><ul><li>手冊與網路補充資料的文字問答</li><li>回答來源標示與頁碼回查</li><li>手機介面、照片上傳與查詢紀錄</li><li>依操作回饋調整提示與流程</li></ul></div><div class="status-panel pending"><span>尚需驗證或介接</span><ul><li>正式問答測試集與專家評分</li><li>真實影像病名辨識及準確率</li><li>農場感測器資料與環境趨勢</li><li>更完整的農友使用樣本</li></ul></div></div>
-        <div class="validation-quote"><strong>「來源可查」是起點，<br>「建議可靠」還需要驗證。</strong><p>引用手冊能幫助回查，卻不能代替作物情境判讀。遇到資料不足、症狀不明或涉及用藥的問題，仍應諮詢農業專家。</p></div>
-      </section>
-
-      <section id="chapter-8" class="content-section section-frame chapter-final" aria-labelledby="ch8-title">
-        <div class="chapter-heading"><span class="chapter-no">08 / OUTLOOK</span><h2 id="ch8-title">從可展示的原型，走向可靠的服務</h2><p>這次研發把栽培手冊轉成可在手機提問的知識入口，也讓團隊看見下一階段最需要補上的驗證工作。</p></div>
-        <div class="outcome-strip"><div><span>01</span><strong>手冊知識可檢索</strong><p>目前收錄 277 個段落，保留作物與頁碼。</p></div><div><span>02</span><strong>問答來源可回查</strong><p>把手冊與網路補充結果區分呈現。</p></div><div><span>03</span><strong>手機流程可操作</strong><p>完成原型並取得初步使用回饋。</p></div></div>
-        <div class="roadmap"><div><span class="eyebrow">NEXT STEPS</span><h3>下一階段的四件事</h3></div><ol><li><b>01</b><div><strong>建立標準題集與專家審查</strong><p>檢查引用、情境適切性與風險遺漏。</p></div></li><li><b>02</b><div><strong>接入真實影像模型</strong><p>以田間照片測試辨識能力與錯誤風險。</p></div></li><li><b>03</b><div><strong>串接農場感測資料</strong><p>讓環境趨勢由示範值變成現場紀錄。</p></div></li><li><b>04</b><div><strong>建立知識更新流程</strong><p>擴充作物資料，定期檢查手冊版本與來源。</p></div></li></ol></div>
-      </section>
-      <footer class="site-footer section-frame"><div><strong>智慧植栽專家系統</strong><p>資料依據：專題作品說明書、操作手冊、系統程式與團隊照片。本站說明的是研究原型；實際農務處置請核對資料來源與現場情況。</p></div><a href="#top">返回頁首 ↑</a></footer>
-    </main>
+<body data-page="1">
+  <a class="skip" href="#article">跳至文章內容</a>
+  <div class="reading-progress" aria-hidden="true"><i></i></div>
+  <aside class="rail" aria-label="雜誌頁面導覽">
+    <a class="brand" href="./index.html"><span class="leafmark" aria-hidden="true">⌁</span><strong>植栽研發誌<small>RAG APP · VOL. 02</small></strong></a>
+    <nav><a href="./index.html" class="active" aria-current="page"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html"><span>05</span>知識庫</a><a href="./rag.html"><span>06</span>RAG 原理</a><a href="./architecture.html"><span>07</span>系統架構</a><a href="./mobile.html"><span>08</span>手機操作</a><a href="./evidence.html"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+    <div class="rail-meta"><span>MAI-LIAO SENIOR HIGH</span><span>2026 DIGITAL EDITION</span></div>
+  </aside>
+  <header class="mobile-head"><a href="./index.html">植栽研發誌</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">目錄</button></header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="手機版頁面導覽"><a href="./index.html" class="active" aria-current="page"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html"><span>05</span>知識庫</a><a href="./rag.html"><span>06</span>RAG 原理</a><a href="./architecture.html"><span>07</span>系統架構</a><a href="./mobile.html"><span>08</span>手機操作</a><a href="./evidence.html"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+  <main id="article" class="magazine-page">
+<article class="cover">
+  <div class="cover-grid">
+    <div class="cover-copy">
+      <div class="issue-line"><span>智慧農業專題 · 數位特刊</span><span>VOL. 02 / 2026</span></div>
+      <p class="overline">RETRIEVAL · GENERATION · FIELDWORK</p>
+      <h1>讓栽培建議<br><em>有據可查。</em></h1>
+      <p class="lead">一份從農業現場出發的研發誌：追蹤團隊如何整理栽培手冊、建立語意索引、設計 RAG 問答流程，最後把複雜技術放進農友能操作的手機介面。</p>
+      <div class="cover-actions"><a class="button gold" href="./contents.html">翻開雜誌 <span>↗</span></a><a class="button download" href="https://mai-liao-rag-crop-research-2026.harrisonlin.chatgpt.site/downloads/智慧植栽_RAG研發誌_Vol2_多頁版網站.zip" download>下載完整網站 ZIP <span>↓</span></a><a class="text-link" href="./rag.html">先看 RAG 原理 →</a></div>
+      <div class="cover-facts"><div><b>12</b><span>個專題頁面</span></div><div><b>277</b><span>個手冊段落</span></div><div><b>5</b><span>類主要作物資料</span></div></div>
+    </div>
+    <div class="cover-art">
+      <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+      <div class="phone cover-phone"><img src="./assets/phone-home.webp" alt="智慧植栽專家系統手機首頁"></div>
+      <div class="cover-caption"><b>手機端 PWA 原型</b><span>問答 · 來源 · 紀錄 · 天氣</span></div>
+    </div>
   </div>
+  <div class="cover-bottom"><span>麥寮高中 · 結合檢索增強生成的智慧植栽專家系統</span><span>SCROLL TO READ / 01—12</span></div>
+</article>
+<section class="abstract spread paper">
+  <div><p class="kicker">EDITOR'S NOTE</p><h2>這不是一個只會聊天的農業 App</h2></div>
+  <div><p>一般生成式 AI 能快速回答，但回答依據不一定清楚。本專題把農業手冊整理為可檢索知識庫，在模型作答前先找出相關段落，讓建議可附上手冊頁碼。</p><p>第二版數位雜誌加入研發年表、需求推導、資料處理、技術分工、證據鏈、測試框架及限制反思，並保留所有功能成熟度說明。</p></div>
+</section>
+
+    <footer class="page-turn">
+      <a href="./future.html"><span>上一頁</span><strong>← 未來藍圖</strong></a>
+      <div><span>01</span><i></i><span>12</span></div>
+      <a href="./contents.html"><span>下一頁</span><strong>目錄 →</strong></a>
+    </footer>
+  </main>
   <script src="./script.js" defer></script>
 </body>
 </html>

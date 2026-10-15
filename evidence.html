@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081e32">
+  <meta name="description" content="讓每個建議都能回查。智慧植栽 RAG 研發誌第二版。">
+  <title>資料追溯｜智慧植栽 RAG 研發誌 Vol.2</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081e32'/%3E%3Cpath d='M16 43c20 3 31-8 32-26-19 1-31 10-32 26Zm0 0c7-8 17-15 29-20' fill='none' stroke='%23d9b66f' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="9">
+  <a class="skip" href="#article">跳至文章內容</a>
+  <div class="reading-progress" aria-hidden="true"><i></i></div>
+  <aside class="rail" aria-label="雜誌頁面導覽">
+    <a class="brand" href="./index.html"><span class="leafmark" aria-hidden="true">⌁</span><strong>植栽研發誌<small>RAG APP · VOL. 02</small></strong></a>
+    <nav><a href="./index.html"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html"><span>05</span>知識庫</a><a href="./rag.html"><span>06</span>RAG 原理</a><a href="./architecture.html"><span>07</span>系統架構</a><a href="./mobile.html"><span>08</span>手機操作</a><a href="./evidence.html" class="active" aria-current="page"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+    <div class="rail-meta"><span>MAI-LIAO SENIOR HIGH</span><span>2026 DIGITAL EDITION</span></div>
+  </aside>
+  <header class="mobile-head"><a href="./index.html">植栽研發誌</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">目錄</button></header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="手機版頁面導覽"><a href="./index.html"><span>01</span>封面</a><a href="./contents.html"><span>02</span>目錄</a><a href="./fieldwork.html"><span>03</span>場域研究</a><a href="./requirements.html"><span>04</span>需求定義</a><a href="./knowledge.html"><span>05</span>知識庫</a><a href="./rag.html"><span>06</span>RAG 原理</a><a href="./architecture.html"><span>07</span>系統架構</a><a href="./mobile.html"><span>08</span>手機操作</a><a href="./evidence.html" class="active" aria-current="page"><span>09</span>資料追溯</a><a href="./evaluation.html"><span>10</span>測試方法</a><a href="./limitations.html"><span>11</span>限制反思</a><a href="./future.html"><span>12</span>未來藍圖</a></nav>
+  <main id="article" class="magazine-page">
+<article class="standard-page evidence-page">
+  <header class="article-head"><div><span class="page-label">09 / TRACEABILITY</span><h1>讓每個建議<br>都有回查路徑</h1></div><p>系統將來源分為「手冊」與「網路補充」。這能幫助使用者判斷回答依據，也讓團隊在測試時回頭比對原文。</p></header>
+  <section class="evidence-spread"><div class="phone evidence-phone"><img src="./assets/phone-answer.webp" alt="系統回答與來源顯示畫面"></div><div><p class="kicker">ANSWER ANATOMY</p><h2>一個回答的三層結構</h2><ol><li><b>01</b><div><strong>結論與處置步驟</strong><p>把找到的內容整理成農友容易閱讀的繁體中文。</p></div></li><li><b>02</b><div><strong>手冊引用</strong><p>列出作物與頁碼，作為主要查核依據。</p></div></li><li><b>03</b><div><strong>網路補充</strong><p>顯示標題與連結，提醒使用者另行確認資料日期與品質。</p></div></li></ol></div></section>
+  <section class="citation-zoom"><img src="./assets/source-citations.webp" alt="畫面中手冊來源與網路來源的局部截圖"><div><p class="kicker">SOURCE UI</p><h2>引用讓答案可以被質疑、被查核</h2><p>來源標示增加透明度，卻不等同於保證正確。手冊內容仍需配合作物品種、生育階段與現場條件判讀。</p></div></section>
+  <section class="evidence-chain"><span>問題</span><i>→</i><span>檢索段落</span><i>→</i><span>模型回答</span><i>→</i><span>來源頁碼</span><i>→</i><span>人工查核</span></section>
+</article>
+
+    <footer class="page-turn">
+      <a href="./mobile.html"><span>上一頁</span><strong>← 手機操作</strong></a>
+      <div><span>09</span><i></i><span>12</span></div>
+      <a href="./evaluation.html"><span>下一頁</span><strong>測試方法 →</strong></a>
+    </footer>
+  </main>
+  <script src="./script.js" defer></script>
+</body>
+</html>
